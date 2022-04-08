@@ -168,3 +168,8 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/jupyternotebooks,python
+
+pmd-bin-6.41.0/
+3-DownloadSamples/code-samples/
+4-RunPMD/watchers/
+8-UnderstandMetrics/repositories
