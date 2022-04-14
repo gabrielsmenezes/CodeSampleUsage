@@ -73,8 +73,8 @@ ggsave("occurrences.pdf", width = 4.5, height = 4.5)
 
 ################################################################################
 #Number of percentage of duplicate lines
-dataFramework1=framework1$percentage_duplicate_loc
-dataFramework4=framework4$percentage_duplicate_loc
+dataFramework1=framework1$percentage_duplicate_lines
+dataFramework4=framework4$percentage_duplicate_lines
 
 factorPositionMedianLabel = 2
 
@@ -82,9 +82,26 @@ title = "Relative Duplicate Lines"
 verticalTitle = "Percentage"
 framework1_median =  median(unlist(dataFramework1), na.rm = TRUE)
 framework4_median =  median(unlist(dataFramework4), na.rm = TRUE)
-aes = aes(factor(framework,levels = c(frameworkName1, frameworkName4)), percentage_duplicate_loc)
+aes = aes(factor(framework,levels = c(frameworkName1, frameworkName4)), percentage_duplicate_lines)
 
 plotGraphic()
 ggsave("relative-duplicate-lines.pdf", width = 4.5, height = 4.5)
 factorPositionMedianLabel = 1.7
 
+
+################################################################################
+#Number of percentage of duplicate lines of code
+dataFramework1=framework1$percentage_duplicate_lines_of_code
+dataFramework4=framework4$percentage_duplicate_lines_of_code
+
+factorPositionMedianLabel = 2
+
+title = "Relative Duplicate Lines of\nCode"
+verticalTitle = "Percentage"
+framework1_median =  median(unlist(dataFramework1), na.rm = TRUE)
+framework4_median =  median(unlist(dataFramework4), na.rm = TRUE)
+aes = aes(factor(framework,levels = c(frameworkName1, frameworkName4)), percentage_duplicate_lines_of_code)
+
+plotGraphic()
+ggsave("relative-duplicate-lines_of_code.pdf", width = 4.5, height = 4.5)
+factorPositionMedianLabel = 1.7
